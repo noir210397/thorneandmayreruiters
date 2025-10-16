@@ -1,0 +1,9 @@
+/* Chevron default style */
+.chevron {
+  transition: transform 0.3s;
+}
+
+/* When parent button has data-state="open", rotate the chevron */
+button[data-state="open"] .chevron {
+  transform: rotate(180deg);
+}
