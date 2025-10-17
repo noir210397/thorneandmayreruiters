@@ -1,6 +1,7 @@
 import React from "react";
 import DrawerCard, { DrawerCardProps } from "./base/drawercard";
 import DrawerWriteup, { WriteUpProps } from "./base/drawerwriteup";
+import AdviceCard, { AdviceCardProps } from "./base/advicecard";
 
 const cards: DrawerCardProps[] = [
   {
@@ -47,6 +48,29 @@ const writeUp: WriteUpProps = {
   title: "candidates",
   path: "/candidates",
 };
+const advices: AdviceCardProps[] = [
+  {
+    description: "how to resign professionally",
+    imageSrc:
+      "https://images.pexels.com/photos/840996/pexels-photo-840996.jpeg",
+    link: "/",
+    title: "career advice",
+  },
+  {
+    description: "how to create great cv",
+    imageSrc:
+      "https://images.pexels.com/photos/1181533/pexels-photo-1181533.jpeg",
+    link: "/",
+    title: "career advice",
+  },
+  {
+    description: "how to prepare for an interview",
+    imageSrc:
+      "https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg",
+    link: "/",
+    title: "career advice",
+  },
+];
 
 export default function Candidates() {
   return (
@@ -57,7 +81,11 @@ export default function Candidates() {
           <DrawerCard key={card.title} {...card} />
         ))}
       </div>
-      <div></div>
+      <div>
+        {advices.map((item) => (
+          <AdviceCard key={item.description} {...item} />
+        ))}
+      </div>
     </div>
   );
 }

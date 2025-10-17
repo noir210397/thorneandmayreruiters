@@ -3,7 +3,7 @@ import {
   AccordionSingleProps,
   AccordionItem,
   AccordionContent,
-  AccordionTrigger,
+  AccordionHeader,
 } from "@radix-ui/react-accordion";
 import { createContext, ReactNode, use, useState } from "react";
 import { twMerge } from "tailwind-merge";
@@ -67,7 +67,7 @@ export function HoverAccordionItem({
   return (
     <AccordionItem value={value} asChild>
       <div
-        className={twMerge(className, "")}
+        className={twMerge(className, "cursor-pointer")}
         onMouseEnter={() => setValue(value)}
         onMouseLeave={() => setValue()}
       >
@@ -90,16 +90,19 @@ export function HoverAccordionTrigger({
     );
   }
   return (
-    <AccordionTrigger asChild>
+    <AccordionHeader asChild>
       <button
-        className={twMerge("flex justify-center items-center", className)}
+        className={twMerge(
+          "flex justify-center items-center cursor-pointer",
+          className
+        )}
       >
         <span className="pe-2 font-semibold text-sm">{children}</span>
         <span className="inline text-xl text-primary font-semibold">
           <BsChevronUp className={styles.chevron} />
         </span>
       </button>
-    </AccordionTrigger>
+    </AccordionHeader>
   );
 }
 
@@ -119,7 +122,7 @@ export function HoverAccordionContent({
   return (
     <AccordionContent asChild>
       <div className={twMerge("", className)}>
-        <div className="max-w-[90%] mx-auto py-5 text-sm">{children}</div>
+        <div className="max-w-[90%] mx-auto py-5">{children}</div>
       </div>
     </AccordionContent>
   );

@@ -9,16 +9,10 @@ const writeUp = {
 
 export default function Contact() {
   return (
-    <div className="grid-cols-3 grid ">
+    <div className="grid-cols-3 lg:grid ">
       {/* write up content here */}
       <DrawerWriteup {...writeUp} />
       {/* cards here */}
-      <div></div>
-      <div className="col-span-2 grid-cols-2 px-2 gap-2">
-        {/* {cards.map((card) => (
-              <DrawerCard key={card.title} {...card} />
-            ))} */}
-      </div>
     </div>
   );
 }

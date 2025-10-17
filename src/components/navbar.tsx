@@ -102,7 +102,7 @@ export default function Navbar() {
       <header className="bg-black h-[80px] relative flex items-center justify-between lg:px-10 px-5">
         <Logo />
         <div className="flex h-full gap-4">
-          <nav id="desktop-nav" className="lg:flex hidden h-full gap-4 ">
+          <nav id="desktop-nav" className="lg:flex hidden h-full">
             {navItems.map(({ content, header }) => {
               return (
                 // <div key={header}>
@@ -111,10 +111,10 @@ export default function Navbar() {
                     value={header}
                     className="cursor-pointer text-white h-full flex justify-center items-center"
                   >
-                    <HoverAccordionTrigger className="px-2">
+                    <HoverAccordionTrigger className="px-2 data-[state=open]:bg-gray-400 h-full">
                       {header}
                     </HoverAccordionTrigger>
-                    <HoverAccordionContent className="bg-white w-full absolute inset-x-0 top-[80px]">
+                    <HoverAccordionContent className="bg-white w-full absolute inset-x-0 top-[80px] border border-gray-400">
                       {content}
                     </HoverAccordionContent>
                   </HoverAccordionItem>
@@ -127,7 +127,7 @@ export default function Navbar() {
           {isSidebarOpen && (
             <nav
               id="mobile-nav"
-              className="overflow-y-auto lg:hidden fixed  top-[80px] bottom-0 inset-x-0 bg-black text-white "
+              className="overflow-y-auto border-b border-gray-400 lg:hidden absolute  top-[80px]  inset-x-0 bg-black text-white "
             >
               <Root type="single" collapsible>
                 {navItems.map(({ content, header }) => {
@@ -138,7 +138,7 @@ export default function Navbar() {
                       className="w-full"
                     >
                       <AccordionTrigger asChild>
-                        <button className="flex justify-between items-center px-5 w-full border-b border-gray-500 py-5">
+                        <button className="data-[state=open]:bg-gray-500 flex justify-between items-center px-5 w-full border-b border-gray-500 py-5">
                           <span className="font-semibold">{header}</span>
                           <span className="text-primary text-lg">
                             <BsChevronUp className={styles.chevron} />

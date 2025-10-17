@@ -18,7 +18,7 @@ export default function DrawerWriteup({
       <h3 className="capitalize font-bold lg:font-extrabold text-base">
         {title}
       </h3>
-      <p className="pe-1">{description}</p>
+      <p className="pe-1 font-medium">{description}</p>
       <Link
         href={path}
         className="underline decoration-2 decoration-primary  capitalize lg:font-semibold"

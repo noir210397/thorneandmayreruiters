@@ -3,7 +3,7 @@ import Insights from "./insight";
 import Candidates from "./candidates";
 import Services from "./services";
 import About from "./about";
-import Contact from "./about"
+import Contact from "./contact"
 // import { createElement } from "react";
 
 // const navItems = [{

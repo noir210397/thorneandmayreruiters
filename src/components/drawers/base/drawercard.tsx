@@ -15,10 +15,10 @@ export default function DrawerCard({
       href={path}
       className={twMerge("lg:block group py-2 flex items-center", className)}
     >
-      <h3 className="py-1 lg:text-base text-sm  text-black group-hover:underline decoration-1 decoration-black lg:font-extrabold font-semibold">
+      <h3 className="text-base py-[2px] text-black group-hover:underline decoration-1 decoration-black  font-semibold">
         {title}
       </h3>
-      <p className="lg:block hidden text-sm py-2 text-black group-hover:underline decoration-1 decoration-black">
+      <p className="lg:block hidden  py-[2px] text-sm text-black group-hover:underline decoration-1 decoration-black">
         {description}
       </p>
     </Link>

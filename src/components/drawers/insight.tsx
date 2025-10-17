@@ -46,9 +46,9 @@ const writeUp: WriteUpProps = {
 
 export default function Insights() {
   return (
-    <div className="grid grid-cols-4">
+    <div className="lg:grid grid-cols-4">
       <DrawerWriteup {...writeUp} />
-      <div className="col-span-2 grid-cols-2 px-2 grid gap-2">
+      <div className="col-span-2 grid-cols-2 lg:grid gap-2 px-2">
         {cards.map((card) => (
           <DrawerCard key={card.title} {...card} />
         ))}

@@ -47,15 +47,15 @@ const cards = [
 const writeUp = {
   description: `Since our establishment in 1985, our belief remains the same: Building strong relationships with people is vital in a successful partnership.`,
   link: "Learn more",
-  title: "About Robert Walters UK",
+  title: "About Thorne and may recruiters",
   path: "/about-us",
 };
 
 export default function About() {
   return (
-    <div className="grid grid-cols-4">
+    <div className="lg:grid grid-cols-3 ">
       <DrawerWriteup {...writeUp} />
-      <div className="col-span-2 grid grid-cols-2 px-2 gap-2">
+      <div className="col-span-2 lg:grid grid-cols-2 gap-2 lg:px-2">
         {cards.map((card) => (
           <DrawerCard key={card.title} {...card} />
         ))}
