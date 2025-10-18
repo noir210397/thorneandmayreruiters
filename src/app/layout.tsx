@@ -1,13 +1,9 @@
 import type { Metadata } from "next";
-import { Lora, Roboto } from "next/font/google";
+import { Lora } from "next/font/google";
 import "@/styles/globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
-const robotom = Roboto({
-  variable: "--font-roboto-normal",
-  subsets: ["latin"],
-});
 const loraNormal = Lora({
   variable: "--font-lora-normal",
   subsets: ["latin"],
@@ -28,9 +24,11 @@ export default function RootLayout({
       lang="en"
       className={` ${loraNormal.variable} ${loraNormal.className}`}
     >
-      <body className={` antialiased text-black font-lora`}>
+      <body
+        className={` antialiased text-black font-lora flex flex-col min-h-screen `}
+      >
         <Navbar />
-        <main>{children}</main>
+        <main className="lg:px-10 px-5 flex-1 py-5">{children}</main>
         <Footer />
       </body>
     </html>

@@ -61,7 +61,7 @@ export default function Navbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   return (
     <>
-      <div className="lg:block hidden">
+      <div className="lg:block hidden w-full">
         <Root type="single" collapsible>
           <AccordionItem
             value="language"
@@ -99,7 +99,7 @@ export default function Navbar() {
           </AccordionItem>
         </Root>
       </div>
-      <header className="bg-black h-[80px] relative flex items-center justify-between lg:px-10 px-5">
+      <header className="bg-black w-full h-[80px] relative flex items-center justify-between lg:px-10 px-5">
         <Logo />
         <div className="flex h-full gap-4">
           <nav id="desktop-nav" className="lg:flex hidden h-full">

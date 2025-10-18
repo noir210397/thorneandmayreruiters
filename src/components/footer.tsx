@@ -23,7 +23,7 @@ const links = [
 ];
 export default function Footer() {
   return (
-    <footer className="bg-black text-white lg:p-10 p-5">
+    <footer className="bg-black text-white lg:p-10 p-5 w-full">
       <div className="flex gap-5 justify-between lg:gap-10 w-full flex-col lg:flex-row items-center lg:items-start">
         <div>
           <Logo />
