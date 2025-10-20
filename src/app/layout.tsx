@@ -25,10 +25,10 @@ export default function RootLayout({
       className={` ${loraNormal.variable} ${loraNormal.className}`}
     >
       <body
-        className={` antialiased text-black font-lora flex flex-col min-h-screen `}
+        className={` antialiased text-black font-lora flex flex-col min-h-screen w-full`}
       >
         <Navbar />
-        <main className="lg:px-10 px-5 flex-1 py-5">{children}</main>
+        <main className="flex-1">{children}</main>
         <Footer />
       </body>
     </html>
