@@ -174,7 +174,7 @@ export default function Navbar() {
                 </button>
               </AccordionTrigger>
               <AccordionContent asChild>
-                <div className="absolute top-[80px] cursor-pointer right-0 bg-white">
+                <div className="absolute top-[80px] cursor-pointer right-0 bg-white text-black z-5">
                   <ul className="*:px-2 *:py-4 *:border-b border-black">
                     <li>Sign Up</li>
                     <li>Sign In</li>
