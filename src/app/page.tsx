@@ -146,7 +146,7 @@ export default function Home() {
       </section>
       <section id="benchmark" className="mx-10 bg-black text-white">
         <div className="flex px-5 justify-center items-center lg:flex-row flex-col-reverse">
-          <div className="flex-1 flex flex-col gap-5 justify-center">
+          <div className="flex-1 flex flex-col gap-5 justify-center py-2">
             <h2 className="text-[calc(2vw+10px)] font-semibold capitalize">
               throne and may survey {new Date().getFullYear()} salary survey
             </h2>
