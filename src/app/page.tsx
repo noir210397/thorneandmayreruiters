@@ -62,12 +62,12 @@ export default function Home() {
             <span className="absolute bg-primary w-10 top-0 h-1/3 min-h-[150px] -left-10"></span>
             <div className="text-white ">
               <h1 className="lg:text-[calc(2vw+10px)] text-[calc(3vw+10px)] capitalize font-extrabold pb-5">
-                Let's take a closer look at your future
+                Lets take a closer look at your future
               </h1>
               <p>
                 We take the time to listen to, and fully connect with, our
-                clients and candidates. That's why we're the world's most
-                trusted talent solutions business.
+                clients and candidates. Thats why were the worlds most trusted
+                talent solutions business.
               </p>
             </div>
             <div className="flex flex-col lg:flex-row gap-5">
