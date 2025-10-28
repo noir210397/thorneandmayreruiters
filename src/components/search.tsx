@@ -1,21 +1,21 @@
+"use client";
+import useJobQuery from "@/hooks/useJobQuery";
+import { makeUniqueStringArray } from "@/utils/utils";
 import Link from "next/link";
 import { GrSearch } from "react-icons/gr";
-const regions = [
-  "North East",
-  "North West",
-  "Yorkshire and the Humber",
-  "East Midlands",
-  "West Midlands",
-  "East of England",
-  "London",
-  "South East",
-  "South West",
-  "Wales",
-  "Scotland",
-  "Northern Ireland",
-];
 
 export default function Search() {
+  const { data, isLoading } = useJobQuery();
+  function getRegions() {
+    if (!data) return ["location"];
+    else {
+      const availableLocations = data.map(({ address }) =>
+        address.town.toLowerCase()
+      );
+      return makeUniqueStringArray(["location", ...availableLocations]);
+    }
+  }
+  const regions = getRegions();
   return (
     <div className="flex gap-5 lg:flex-row flex-col lg:w-[80%] w-[90%] mx-auto justify-center items-center">
       <span className="font-semibold">Looking for a job?</span>
@@ -29,21 +29,23 @@ export default function Search() {
       </div>
       <div className="flex-1 h-[50px] bg-gray-200 w-full border-1 border-gray-500">
         <select
+          disabled={isLoading}
           name=""
           id=""
-          className="w-full p-2 text-gray-500 font-medium h-full"
+          className="w-full p-2 text-gray-500 font-medium h-full capitalize"
         >
-          <option>Location</option>
-          {regions.map((r) => (
-            <option key={r} className="">
-              {r}
+          {regions.map((region) => (
+            <option
+              key={region}
+              className="capitalize"
+              value={region === "location" ? "" : region}
+            >
+              {region}
             </option>
           ))}
         </select>
       </div>
-      <Link href={"/jobs"} className="bg-primary text-white px-5 py-2">
-        Search
-      </Link>
+      <button className="bg-primary text-white px-5 py-2">Search</button>
       <Link href={`/`} className="underline decoration-1 decoration-primary">
         Looking for hire
       </Link>
