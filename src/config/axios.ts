@@ -1,9 +1,9 @@
 import axios from "axios"
 
-const url = process.env.NEXT_PUBLIC_BASE_API_URL
+// const url = process.env.NEXT_PUBLIC_BASE_API_URL
 
-const instance = axios.create({ baseURL: `http://localhost:3000/api`, })
-console.log(instance.defaults.baseURL);
+const instance = axios.create({ baseURL: `https://agencyapi-bwp7.onrender.com/api/job`, })
+// console.log(instance.defaults.baseURL);
 
 
 export default instance
