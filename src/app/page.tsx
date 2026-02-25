@@ -50,6 +50,7 @@ export default function Home() {
               // height={1000}
               // width={1000}
               src={`https://images.pexels.com/photos/8424586/pexels-photo-8424586.jpeg`}
+              // src={`https://images.pexels.com/photos/7845090/pexels-photo-7845090.jpeg`}
             />
           </div>
         </div>
