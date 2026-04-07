@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+A modern Next.js frontend application for displaying job listings from the Job Agency API.
+This project currently focuses on the jobs module, allowing users to fetch and view available jobs from the backend service.
 
-## Getting Started
+The app is built with Next.js 15, React 19, TypeScript, and TanStack Query, with a lightweight and scalable structure ready for future expansion into shifts, bookings, authentication, and client management.
 
-First, run the development server:
+Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This frontend is designed as the client-facing layer of the Job Agency platform.
+At the moment, it consumes the Jobs API and presents job data in a clean, responsive interface.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The current goal of the project is to:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Fetch jobs from the backend API
+Display job listings in a structured UI
+Build a reusable frontend foundation for future modules
+Prepare the app for scaling into a full agency management system
+Current Features
+Fetch job listings from the Job Agency API
+Display available jobs in a responsive interface
+Manage server state using TanStack Query
+Handle API requests with Axios
+Use reusable UI patterns for future scalability
+Built with TypeScript for safer development
+Tech Stack
+Frontend
+Next.js 15 – React framework for server-rendered and modern web applications
+React 19 – UI library
+TypeScript – Static typing and maintainability
+Tailwind CSS 4 – Utility-first styling
+tailwind-merge – Utility helper for merging Tailwind classes
+Data Fetching
+Axios – HTTP client for API requests
+@tanstack/react-query – Data fetching, caching, and async state management
+UI Utilities
+@radix-ui/react-accordion – Accessible accordion components
+react-icons – Icon library for UI elements
+Current Scope
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This app currently supports only the Jobs part of the backend API.
 
-## Learn More
+Connected Endpoint
+GET /api/jobs – Fetch all jobs
 
-To learn more about Next.js, take a look at the following resources:
+As the backend grows, this frontend can be extended to support:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Authentication
+Shift management
+Booking management
+Client dashboards
+Role-based protected pages
